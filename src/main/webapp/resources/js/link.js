@@ -27,12 +27,11 @@ function goUrl_tm_1_3_4() { window.location.href = getContextPath()+"/mypage/wit
 /* 서비스 소개 */
 function goUrl_1_1() {  window.location.href = getContextPath()+ "/about.do";};
 
-/* 교육과정 */
-function goUrl_2_1() { window.location.href = getContextPath()+"/course/courseForm.do";}; //교육과정
-function goUrl_2_1_1(seq) { window.location.href = getContextPath()+"/course/courseList.do?cateSeq="+seq;}; //교육과정 카테고리
-function goUrl_2_1_2() { window.location.href = getContextPath()+"/course/externalVideoList.do";}; //외부 영상 강의실
+function goUrl_2_1() { window.location.href = getContextPath()+"/course/courseForm.do";};
+function goUrl_2_1_1(seq) { window.location.href = getContextPath()+"/course/courseList.do?cateSeq="+seq;};
+function goUrl_2_1_2() { window.location.href = getContextPath()+"/course/externalVideoList.do";};
 
-/* 나의 강의실 */
+
 function goUrl_3_1() { window.location.href = getContextPath()+"/myClass/myClassForm.do";};
 function goUrl_3_1_1() { window.location.href = getContextPath()+"/myClass/learningCourseList.do";};
 function goUrl_3_1_2() { window.location.href = getContextPath()+"/myClass/completeCourseList.do";};

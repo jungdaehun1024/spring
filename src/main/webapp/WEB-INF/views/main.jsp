@@ -51,7 +51,7 @@
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
                             <li class="active"><a href="#home">Home</a></li>
-                            <li><a href="#service">Services</a></li>
+                            <li><a href="#service">공지사항</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#clients">Clients</a></li>
