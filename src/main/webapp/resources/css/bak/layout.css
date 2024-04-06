@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*layout*/
+
+header {position: relative;}
+header .wrapper {position: relative; margin: 0 auto; max-width: 1200px; width: 100%; box-sizing: border-box;}
+/*.container {min-height: 724px;}*/
+.container .wrapper {position: relative; margin: 0 auto; max-width: 1200px; width: 100%; box-sizing: border-box; display: flex;}
+footer .wrapper {position: relative; margin: 0 auto; max-width: 1200px; width: 100%; box-sizing: border-box;}
+
+/*nav, article {float: left;}*/
+article {/*position: relative;*/ width: calc(100% - 255px); overflow: hidden;}
+
+@media (max-width: 1257px) {
+html {min-width: 1240px;}
+}
+
+@media (min-width: 785px) and (max-width: 1041px) {
+html {min-width: 768px;}
+
+header .wrapper {max-width: 890px;}
+.container .wrapper {max-width: 890px;}
+footer .wrapper {max-width: 890px;}
+
+}
+
+@media (min-width: 300px) and (max-width: 784px) {
+html {min-width: 100%;}
+.container .wrapper, footer .wrapper {padding: 0 20px;}
+
+}
+

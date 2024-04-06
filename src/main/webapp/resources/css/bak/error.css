@@ -1,0 +1,22 @@
+.error-wrap .error-code, .error-wrap .error-title {letter-spacing: -0.075rem; font-weight: 500; line-height: 1.2;}
+.error-code {font-size: 4rem; color: #555;}
+.error-title {font-size: 2rem;}
+.error-wrap p {font-family: 'Notosanscjk', sans-serif; font-size: 1.1em; font-weight: 300; line-height: 1.7em; color: #555; letter-spacing: -0.075rem;} 
+.error-btn {display: flex; align-content: center; margin: 30px auto; width: 30%; min-width: 500px;}
+.error-btn a {display: inline-block; margin: 0 .3rem; width: 50%;}
+.error-btn a i {vertical-align: baseline;}
+.error-btn a.btn {background-color: #FFF; padding: .75rem 2rem; border: 1px solid #D9D9D9; border-radius: .15rem .15rem .15rem .15rem; font-weight: 400; letter-spacing: -0.075rem; font-size: 1rem; line-height: 1.5; text-align: center; vertical-align: middle; cursor: pointer;}
+.error-btn a.btn:link, .error-btn a.btn:visited {text-decoration: none; color: #000;}
+footer.error {position: fixed; bottom: 0; text-align: center; padding: 1rem 1rem 1rem 1rem; width: 100%; background-color: #f6f6f6;}
+footer.error .wrapper p {float: unset; margin: 0 0 0 0; padding-right: 0;}
+footer.error .wrapper p img {height: 34px; padding-top: 0;}
+footer.error .wrapper address {display: none;}
+
+   
+@media (max-width: 600px) {
+html {margin: 0 auto; width: 100%;  }
+.text-center {margin: 0 auto; width: 90%; }
+.text-center p {word-break: keep-all; margin-bottom: 1rem;}
+.error-btn {display: unset; width: 100%;}
+.error-btn a {margin: .15rem 0 ; width: 100%;}
+}
