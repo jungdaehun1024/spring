@@ -18,20 +18,25 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
-    <!-- 파일 모두 생성했는지 확인 -->
+    <!-- 파일 모두 생성했는지 확인
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value ="classpath:mybatis/mybatis-config.xml" />
         <property name="mapperLocations" value="classpath:mappers/DB${jdbc.db}/*/*.xml" />
     </bean>
+    -->
 
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:mappers/DB${jdbc.db}/*/*.xml"/>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+    </bean>
 
-
-
+    <!--
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 
         <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
-    </bean>
+    </bean> -->
 
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
