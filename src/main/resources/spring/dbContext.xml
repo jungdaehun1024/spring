@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 외부 프로퍼티 파일 로딩 -->
-    <context:property-placeholder location="classpath:/dbconnection.properties"/>
-    <context:property-placeholder location="classpath:/mybatis.properties"/>
+    <context:property-placeholder location="classpath:/properties/dbconnection.properties"/>
+    <context:property-placeholder location="classpath:/properties/mybatis.properties"/>
 
     <!-- 데이터베이스 이름 및 계정 확인 -->
     <bean id="dataSource"

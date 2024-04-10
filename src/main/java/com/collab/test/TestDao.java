@@ -1,5 +1,6 @@
 package com.collab.test;
 
+import egovframework.rte.psl.dataaccess.EgovAbstractMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,18 +10,11 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public class TestDao {
-
-    @Autowired
-    private SqlSession sqlSession;
-    @Autowired
-    private SqlSessionFactoryBean sqlSessionFactory;
-
-
+public class TestDao extends EgovAbstractMapper {
 
     public List<String> getList()throws Exception{
-        SqlSession session = sqlSessionFactory.getObject().openSession();
-         List<String> result = session.selectList("main.getList");
+//        SqlSession session = sqlSessionFactory.getObject().openSession();
+         List<String> result = selectList("main.getList");
         return result;
     }
 }
