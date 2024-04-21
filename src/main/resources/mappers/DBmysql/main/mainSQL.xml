@@ -5,4 +5,9 @@
     <select id="getList" resultType="String">
         SELECT colum1 FROM test;
     </select>
+
+
+<!--    <select id="" parameterType="" resultType="">-->
+
+<!--    </select>-->
 </mapper>
