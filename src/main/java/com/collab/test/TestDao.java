@@ -13,7 +13,6 @@ import java.util.Map;
 public class TestDao extends EgovAbstractMapper {
 
     public List<String> getList()throws Exception{
-//        SqlSession session = sqlSessionFactory.getObject().openSession();
          List<String> result = selectList("main.getList");
         return result;
     }
