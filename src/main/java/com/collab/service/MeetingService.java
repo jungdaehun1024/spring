@@ -140,4 +140,9 @@ public class MeetingService {
     public int insertWeeklyrank()throws Exception{
         return meetingDao.insertWeeklyranking();
     }
+
+    //해시태그 연관 게시글 보여주기
+    public List<MeetingDto> getRelatedPosts(int tagtypeId) throws Exception{
+        return meetingDao.selectRelatedPosts(tagtypeId);
+    }
 }

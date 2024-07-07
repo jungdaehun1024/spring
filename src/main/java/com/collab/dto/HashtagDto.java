@@ -12,4 +12,5 @@ import java.util.List;
 public class HashtagDto {
     private String tagContent;
     private int regId;
+    private int tagtypeId;
 }

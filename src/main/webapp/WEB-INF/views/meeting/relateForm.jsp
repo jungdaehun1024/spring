@@ -54,8 +54,8 @@
         </div>
         <nav>
             <ul>
-<%--                <li><a href="javascript:void(0)">모임</a></li>--%>
-<%--                <li><a href="javascript:void(0)">커뮤니티</a></li>--%>
+                <%--                <li><a href="javascript:void(0)">모임</a></li>--%>
+                <%--                <li><a href="javascript:void(0)">커뮤니티</a></li>--%>
                 <li><a href="/guide">이용가이드</a></li>
                 <li><a href="/notice">공지사항</a></li>
                 <li><a href="/event">이벤트</a></li>
@@ -81,29 +81,8 @@
             </div>
             <div class="sec02_cont">
                 <div class="sec02_left_cont">
-                    <div class="searchCateBox">
-                        <div class="searchBox">
-                            <input type="search" value="" placeholder="검색어를 입력해주세요">
-                        </div>
-                        <div class="cateBox">
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                            <a href="javascript:void(0)">#카테고리</a>
-                        </div>
-                    </div>
                     <div class="flex-wrap">
-                        <c:forEach var="item" items="${meetings}">
+                        <c:forEach var="item" items="${relatedPosts}">
                             <div class="flex-item" >
                                 <a class="regId" href="/meeting/${item.regId}" data-meeting-id="${item.regId}">
                                     <div class="imgBox">
@@ -118,17 +97,17 @@
                                         <intput type="hidden" value="${item.regId}" class="item_regId"></intput>
                                         <h6 class="tag">
                                             <c:forEach var="hashtag" items="${hashtags}" varStatus="index">
-                                                 <c:if test="${item.regId eq hashtag.regId}">
+                                                <c:if test="${item.regId eq hashtag.regId}">
                                                     <a href="/relate/${hashtag.tagtypeId}">${hashtag.tagContent}</a>
 
-                                                 </c:if>
+                                                </c:if>
 
                                             </c:forEach>
                                         </h6>
                                         <h5 class="dateText">${item.strPeriod} ~ ${item.endPeriod} </h5>
                                         <span id="likeCnt_${item.regId}">좋아요:${item.likeCnt}</span>
                                         <span>카테고리ID:${item.categoryId}</span>
-                                       <span id="viewCnt_${item.regId}">조회수:${item.viewCnt}</span>
+                                        <span id="viewCnt_${item.regId}">조회수:${item.viewCnt}</span>
                                     </div>
                                 </a>
                             </div>
@@ -136,37 +115,11 @@
                     </div>
 
                 </div>
-                <div class="sec02_right_cont">
-                    <div class="login_wrap">
-                        <div class="login_top">
-                            <h3>로그인</h3>
-                            <div class="checkBox">
-                                <input id="check_id" type="checkbox">
-                                <label for="check_id">로그인 유지</label>
-                            </div>
-                        </div>
 
-                        <div class="login_info_wrap">
-                            <div class="login_info_inner">
-                                <input class="id_input" type="text" value="" placeholder="아이디">
-                                <input class="password_input" type="password" value="" placeholder="비밀번호">
-                            </div>
-                            <div class="submitBtn">
-                                <button type="submit">로그인</button>
-                            </div>
-                        </div>
-
-                        <div class="login_link">
-                            <a href="/">아이디 / 비밀번호 찾기</a>
-                            <a href="${contextPath}/views/login/join.jsp">회원가입</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </div>
 </div>
-
 <div class="footer">
     <h6>Copyright Portfolio</h6>
     <h6>상업적인 용도로 사용되는 페이지가 아닌 포트폴리오용 페이지입니다.</h6>

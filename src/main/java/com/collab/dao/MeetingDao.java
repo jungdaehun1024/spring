@@ -95,5 +95,10 @@ public class MeetingDao extends EgovAbstractMapper {
         return insert("main.insertWeeklyranking");
     }
 
+    //해시태그 연관 게시글 보여주기
+    public List<MeetingDto> selectRelatedPosts(int tagtypeId) throws Exception{
+        List<MeetingDto> relatedPosts = selectList("main.selectRelatedPosts",tagtypeId);
+        return relatedPosts;
+    }
 
 }

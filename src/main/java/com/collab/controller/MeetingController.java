@@ -97,4 +97,14 @@ public class MeetingController extends ExceptionController {
         model.addAttribute("weeklyRankList", weeklyRankList);
         return "meeting/rankForm";
     }
+
+    //연관 게시글 보여주는 페이지
+    @RequestMapping (value = "/relate/{tagtypeId}", method = RequestMethod.GET)
+    public String relatedForm(@PathVariable int tagtypeId, Model model) throws Exception{
+        List<MeetingDto> relatedPosts = meetingService.getRelatedPosts(tagtypeId);
+        model.addAttribute("relatedPosts", relatedPosts);
+        List<HashtagDto> hashtags = meetingService.getHashtags();
+        model.addAttribute("hashtags", hashtags);
+        return "meeting/relateForm";
+    }
 }
