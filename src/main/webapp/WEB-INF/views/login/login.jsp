@@ -78,6 +78,6 @@
         <h6>상업적인 용도로 사용되는 페이지가 아닌 포트폴리오용 페이지입니다.</h6>
     </div>
     <script src="${contextPath}/resources/js/sub.js"></script>
-    <script src="${contextPath}/resources/js/common.js.js"></script>
+    <script src="${contextPath}/resources/js/common.js"></script>
 </body>
 </html>

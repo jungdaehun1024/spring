@@ -72,6 +72,5 @@
 </div>
 <script src="${contextPath}/resources/js/sub.js"></script>
 <script src="${contextPath}/resources/js/common.js.js"></script>
-
 </body>
 </html>
